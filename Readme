@@ -1,0 +1,54 @@
+# Nusa Wallet Extension
+
+**Nusa Wallet** adalah ekstensi dompet kripto berbasis browser yang dirancang untuk memudahkan pengguna dalam mengelola aset digital, mengirim maupun menerima token, serta terhubung dengan aplikasi terdesentralisasi (dApps) secara aman dan cepat.
+
+Tersedia untuk browser **Google Chrome** (dan browser berbasis Chromium lainnya seperti Brave, Edge) serta **Mozilla Firefox**.
+
+---
+
+## ✨ Fitur Utama
+* **Manajemen Multi-Aset:** Pantau saldo dan kelola berbagai aset kripto dalam satu antarmuka yang ringkas.
+* **Kirim & Terima Instan:** Lakukan transaksi aset digital dengan mudah menggunakan alamat dompet atau kode QR.
+* **Koneksi dApps (Web3):** Hubungkan dompet Anda secara langsung ke berbagai aplikasi Web3 dengan persetujuan transaksi yang transparan.
+* **Keamanan Terjamin:** Kunci privat (*private key*) dan *seed phrase* dienkripsi secara lokal di perangkat Anda.
+
+---
+
+## 📥 Cara Instalasi
+
+Unduh file rilis terbaru sesuai dengan browser yang Anda gunakan melalui halaman [**GitHub Releases**](../../releases).
+
+### 1. Google Chrome / Brave / Microsoft Edge
+1. Unduh file **`nusa-wallet-chrome.zip`** dari halaman [Releases](../../releases).
+2. Ekstrak (*unzip*) file tersebut ke dalam sebuah folder di komputer Anda.
+3. Buka browser dan masuk ke halaman manajemen ekstensi dengan mengetik alamat berikut di kolom URL:
+   * Chrome: `chrome://extensions/`
+   * Brave: `brave://extensions/`
+   * Edge: `edge://extensions/`
+4. Aktifkan **Developer mode** (Mode pengembang) di pojok kanan atas.
+5. Klik tombol **Load unpacked** (Muat yang belum dikemas), lalu pilih folder hasil ekstrak tadi.
+6. Ekstensi **Nusa Wallet** siap digunakan.
+
+### 2. Mozilla Firefox
+1. Unduh file **`nusa-wallet-firefox.zip`** dari halaman [Releases](../../releases).
+2. Buka Firefox dan ketik `about:debugging#/runtime/this-firefox` di kolom URL.
+3. Klik tombol **Load Temporary Add-on...** (Muat Pengaya Sementara...).
+4. Pilih file **`nusa-wallet-firefox.zip`** (atau file `manifest.json` di dalam folder hasil ekstrak).
+5. Ikon **Nusa Wallet** akan muncul di toolbar browser Anda.
+
+---
+
+## 🔒 Catatan Keamanan
+* **Selalu simpan *Secret Recovery Phrase* (Seed Phrase) Anda** di tempat yang aman dan offline.
+* Tim Nusa Wallet **tidak pernah** meminta *seed phrase* atau *private key* Anda dalam kondisi apa pun.
+* Pastikan Anda hanya mengunduh file rilis resmi dari repositori ini.
+
+---
+
+## 🤝 Kontribusi & Laporan Bug
+Jika Anda menemukan bug atau memiliki saran fitur baru, silakan buat laporan melalui tab [**Issues**](../../issues) di repositori ini.
+
+---
+
+## 📄 Lisensi
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
