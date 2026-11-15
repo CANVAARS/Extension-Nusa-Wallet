@@ -1,0 +1,43 @@
+name: Release Nusa Wallet Extension
+
+on:
+  push:
+    tags:
+      - 'v*' # Berjalan otomatis saat push tag, misal: v1.0.0
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Wajib agar action bisa membuat Release & upload file
+
+    steps:
+      - name: Checkout Kode
+        uses: actions/checkout@v4
+
+      # (Opsional) Jika Anda perlu proses build sebelum zip, aktifkan bagian ini:
+      # - name: Setup Node & Build
+      #   run: |
+      #     npm ci
+      #     npm run build
+
+      - name: Zip Nusa Wallet Chrome
+        uses: vimtor/action-zip@v1.2
+        with:
+          files: dist/chrome/ # Ganti dengan path folder hasil build Chrome Anda
+          dest: nusa-wallet-chrome.zip
+
+      - name: Zip Nusa Wallet Firefox
+        uses: vimtor/action-zip@v1.2
+        with:
+          files: dist/firefox/ # Ganti dengan path folder hasil build Firefox Anda
+          dest: nusa-wallet-firefox.zip
+
+      - name: Upload ke GitHub Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            nusa-wallet-chrome.zip
+            nusa-wallet-firefox.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
