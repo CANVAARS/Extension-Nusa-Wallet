@@ -23,6 +23,7 @@ jobs:
       - name: Upload File Zip ke GitHub Releases
         uses: softprops/action-gh-release@v2
         with:
+          generate_release_notes: true # Otomatis membuat daftar perubahan (changelog)
           files: |
             nusa-wallet-chrome-${{ github.ref_name }}.zip
             nusa-wallet-firefox-${{ github.ref_name }}.zip
