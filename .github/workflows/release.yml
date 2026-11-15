@@ -3,23 +3,28 @@ name: Release Nusa Wallet
 on:
   push:
     tags:
-      - 'v*' # Workflow akan berjalan otomatis setiap kali Anda membuat tag versi (contoh: v1.0.0)
+      - 'v*' # Berjalan otomatis saat membuat tag baru (misal: v1.1.0)
 
 jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Memberi izin agar Actions bisa membuat Release baru
+      contents: write
 
     steps:
       - name: Ambil Kode Repositori
         uses: actions/checkout@v4
 
+      - name: Tambahkan Nomor Versi ke Nama File Zip
+        run: |
+          cp nusa-wallet-chrome.zip nusa-wallet-chrome-${{ github.ref_name }}.zip
+          cp nusa-wallet-firefox.zip nusa-wallet-firefox-${{ github.ref_name }}.zip
+
       - name: Upload File Zip ke GitHub Releases
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            nusa-wallet-chrome.zip
-            nusa-wallet-firefox.zip
+            nusa-wallet-chrome-${{ github.ref_name }}.zip
+            nusa-wallet-firefox-${{ github.ref_name }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
