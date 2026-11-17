@@ -1,6 +1,6 @@
 # Nusa Wallet Extension
 
-**Nusa Wallet** adalah ekstensi dompet **Nusacoin (NUX)** untuk browser. Dengan ekstensi ini Anda dapat melihat saldo, mengirim NUX, dan masuk ke aplikasi web Nusachain (dApps) tanpa memasukkan private key ke situs mana pun. Setiap transaksi harus Anda setujui sendiri lewat jendela konfirmasi.
+**Nusa Wallet** adalah ekstensi dompet **Nusacoin (NUX)** untuk browser. Dengan ekstensi ini Anda dapat melihat saldo, mengirim NUX, dan masuk ke aplikasi web Nusachain (dApps) tanpa memasukkan private key atau seed phrase ke situs mana pun. Setiap transaksi harus Anda setujui sendiri lewat jendela konfirmasi.
 
 Tersedia untuk **Google Chrome** dan browser berbasis Chromium (Brave, Microsoft Edge), serta **Mozilla Firefox**.
 
@@ -19,7 +19,7 @@ Tersedia untuk **Google Chrome** dan browser berbasis Chromium (Brave, Microsoft
 
 ## 🔒 Keamanan
 
-* Private key dienkripsi dengan password Anda (PBKDF2 + AES-GCM) dan hanya tersimpan di browser ini.
+* Private key atau seed phrase dienkripsi dengan password Anda (PBKDF2 + AES-GCM) dan hanya tersimpan di browser ini.
 * **Password tidak dapat dipulihkan.** Simpan cadangan private key Anda di tempat yang aman dan offline.
 * Tim Nusa Wallet **tidak pernah** meminta password atau private key Anda dalam kondisi apa pun.
 * Periksa alamat tujuan dengan teliti sebelum menyetujui transaksi. Transaksi blockchain tidak dapat dibatalkan.
